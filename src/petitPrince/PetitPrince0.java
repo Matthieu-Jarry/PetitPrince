@@ -12,8 +12,9 @@ public class PetitPrince0 implements Sujet{
 	
 	public PetitPrince0() {
 		cpt = 0;
-		argent = 0;
+		argent = 100;
 		nom = "Petit Prince";
+		console = new ConsoleJavaBoy(this);
 		run();
 	}
 
@@ -29,8 +30,9 @@ public class PetitPrince0 implements Sujet{
 
 	@Override
 	public void run() {
-		console.parler(getNom() + " : J'ai " + getArgent() + " d'argent et j'ai fait " +cpt+ " tour");
+		console.parler("J'ai fait " +cpt+ " tour");
 		console.seDirigerVers(0);
+		cpt++;
 	}
 
 
